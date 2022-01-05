@@ -422,33 +422,334 @@ public class Exercicios {
          */
 
         /*
+        System.out.println("Entre com o valor de a:");
+        int a = scan.nextInt();
+
+        if (a == 0){
+            System.out.println("Não é equação de segundo grau");
+        } else {
+
+            System.out.println("Entre com o valor de b:");
+            int b = scan.nextInt();
+
+            System.out.println("Entre com o valor de c:");
+            int c = scan.nextInt();
+
+            double delta = (b*b) - (4*a*c);
+            if (delta < 0){
+                System.out.println("detla negativo");
+            } else {
+
+                System.out.println("delta: " + delta);
+
+                double x1 = ((-b) + Math.sqrt(delta)) / (2*a);
+                double x2 = ((-b) - Math.sqrt(delta)) / (2*a);
+
+                System.out.println("x1 = " + x1);
+                System.out.println("x2 = " + x2);
+            }
+
+        }
+        */
+
+        /*
         17.Faça um Programa que peça um número correspondente a um determinado ano e em seguida informe se este ano é ou não bissexto.
          */
+
+        /*
+        System.out.println("Informe um ano: ");
+        int ano = scan.nextInt();
+
+        if ((ano % 400 == 0) || (ano % 4 == 0 && ano % 100 != 0)){
+            System.out.println("é bissexto");
+        } else {
+            System.out.println("não é bissexto");
+        }
+        */
 
         /*
         18.Faça um Programa que peça um número inteiro e determine se ele é par ou impar. Dica: utilize o operador módulo (resto da divisão).
          */
 
         /*
+        System.out.println("Digite um número inteiro");
+        int num = scan.nextInt();
+
+        if (num %2 == 0) {
+            System.out.println("O número é par");
+        } else {
+            System.out.println("O número é ímpar");
+        }
+        */
+
+        /*
         19.Faça um Programa que leia 2 números e em seguida pergunte ao usuário qual operação ele deseja realizar. O resultado da operação deve ser acompanhado de uma frase que diga se o número é: . par ou ímpar; a. positivo ou negativo;
          */
+
+        /*
+        System.out.println("Entre com o primeiro número:");
+        int num1 = scan.nextInt();
+
+        System.out.println("Entre com o segundo número:");
+        int num2 = scan.nextInt();
+
+        System.out.println("Entre com a operação (+ - / *): ");
+        String operacao = scan.next();
+
+        double resultado = 0;
+        boolean valida = true;
+
+        switch(operacao){
+            case "+":
+                resultado = num1 + num2;
+                break;
+            case "-":
+                resultado = num1 - num2;
+                break;
+            case "*":
+                resultado = num1 * num2;
+                break;
+            case "/":
+                resultado = num1 / num2;
+                break;
+            default:
+                System.out.println("Operação inválida");
+                valida = false;
+        }
+
+        if (valida){
+
+            System.out.println("Resultado: " + resultado);
+
+            if (resultado >=0){
+                System.out.println("resultado positivo");
+            } else {
+                System.out.println("resultado negativo");
+            }
+
+            if (resultado % 2 == 0){
+                System.out.println("resultado par");
+            }else {
+                System.out.println("resultado ímpar");
+            }
+        }
+        */
 
         /*
         20.Faça um programa que faça 5 perguntas para uma pessoa sobre um crime. As perguntas são: . "Telefonou para a vítima?" a. "Esteve no local do crime?" b. "Mora perto da vítima?" c. "Devia para a vítima?" d. "Já trabalhou com a vítima?" O programa deve no final emitir uma classificação sobre a participação da pessoa no crime. Se a pessoa responder positivamente a 2 questões ela deve ser classificada como "Suspeita", entre 3 e 4 como "Cúmplice" e 5 como "Assassino". Caso contrário, ele será classificado como "Inocente".
          */
 
         /*
-        21.Um posto está vendendo combustíveis com a seguinte tabela de descontos: . Álcool: a. até 20 litros, desconto de 3% por litro b. acima de 20 litros, desconto de 5% por litro Gasolina: c. até 20 litros, desconto de 4% por litro d. acima de 20 litros, desconto de 6% por litro Escreva um algoritmo que leia o número de litros vendidos, o tipo de combustível (codificado da seguinte forma: A-álcool, G- gasolina), calcule e imprima o valor a ser pago pelo cliente
-       sabendo-se que o preço do litro da gasolina é R$ 2,50 o preço do litro do álcool é R$ 1,90.
+        System.out.println("Telefonou pra vítima?");
+        String pergunta1 = scan.next();
+        System.out.println("Esteve no local do crime?");
+        String pergunta2 = scan.next();
+        System.out.println("Mora perto da vítima?");
+        String pergunta3 = scan.next();
+        System.out.println("Devia para a vítima?");
+        String pergunta4 = scan.next();
+        System.out.println("Trabalhou com a vítima?");
+        String pergunta5 = scan.next();
+
+        int cont = 0;
+
+        if (pergunta1.equalsIgnoreCase("S")){
+            cont++;
+        }
+
+        if (pergunta2.equalsIgnoreCase("S")){
+            cont++;
+        }
+
+        if (pergunta3.equalsIgnoreCase("S")){
+            cont++;
+        }
+
+        if (pergunta4.equalsIgnoreCase("S")){
+            cont++;
+        }
+
+        if (pergunta5.equalsIgnoreCase("S")){
+            cont++;
+        }
+
+        if (cont == 2){
+            System.out.println("Suspeita");
+        } else if (cont == 3 || cont == 4){
+            System.out.println("Cúmplice");
+        } else if (cont == 5){
+            System.out.println("Assassino");
+        } else if (cont == 0){
+            System.out.println("Inocente");
+        }
+        */
+
+
+        /*
+        21.Um posto está vendendo combustíveis com a seguinte tabela de descontos:
+        . Álcool:
+            a. até 20 litros, desconto de 3% por litro
+            b. acima de 20 litros, desconto de 5% por litro
+         Gasolina:
+            c. até 20 litros, desconto de 4% por litro
+            d. acima de 20 litros, desconto de 6% por litro
+         Escreva um algoritmo que leia o número de litros vendidos,
+         o tipo de combustível (codificado da seguinte forma: A-álcool, G- gasolina),
+         calcule e imprima o valor a ser pago pelo cliente sabendo-se que o preço do litro da gasolina é R$ 2,50 o preço do litro do álcool é R$ 1,90.
          */
 
         /*
-        22.Uma fruteira está vendendo frutas com a seguinte tabela de preços: Até 5 Kg Acima de 5 Kg Morango R$ 2,50 por Kg R$ 2,20 por Kg Maçã R$ 1,80 por Kg R$ 1,50 por Kg Se o cliente comprar mais de 8 Kg em frutas ou o valor total da compra ultrapassar R$ 25,00, receberá ainda um desconto de 10% sobre este total. Escreva um algoritmo para ler a quantidade (em Kg) de morangos e a quantidade (em Kg) de maças adquiridas e escreva o valor a ser pago pelo cliente.
+        System.out.println("Qual foi o combustível vendido? A - Alcool G - Gasolina");
+        String combustivel = scan.next();
+        System.out.println("Qual a quantidade colocada?");
+        double qtddCombustivel = scan.nextDouble();
+        double precoGasolina = 2.5;
+        double precoAlcool = 1.9;
+        int desconto = 0;
+        double valor = 0;
+        double totalDesc = 0;
+
+
+        if (combustivel.equalsIgnoreCase("a")){
+
+            if (qtddCombustivel <= 20){
+                desconto = 3;
+            } else {
+                desconto = 5;
+            }
+
+            valor = qtddCombustivel * precoAlcool;
+
+        } else if (combustivel.equalsIgnoreCase("g")){
+
+            if (qtddCombustivel <= 20){
+                desconto = 4;
+            } else {
+                desconto = 6;
+            }
+
+            valor = qtddCombustivel * precoGasolina;
+        }
+
+        totalDesc = (valor / 100) * desconto;
+
+        double precoAPagar = valor - totalDesc;
+
+        System.out.println("Valor a ser pago: " + precoAPagar);
+
+        System.out.println("O valor total foi: " + valor);
+        */
+
+        /*
+        22.Uma fruteira está vendendo frutas com a seguinte tabela de preços:
+        Morango:
+        Até 5 Kg: R$ 2,50 por Kg
+        Acima de 5 Kg: R$ 2,20 por Kg
+
+        Maçã :
+        Até 5 Kg: R$ 1,80 por Kg
+        Acima de 5 Kg: R$ 1,50 por Kg
+
+        Se o cliente comprar mais de 8 Kg em frutas ou o valor total da compra ultrapassar R$ 25,00, receberá ainda um desconto de 10% sobre este total. Escreva um algoritmo para ler a quantidade (em Kg) de morangos e a quantidade (em Kg) de maças adquiridas e escreva o valor a ser pago pelo cliente.
          */
 
         /*
-        23.O Hipermercado Tabajara está com uma promoção de carnes que é imperdível. Confira: o Até 5 Kg Acima de 5 Kg o File Duplo R$ 4,90 por Kg R$ 5,80 por Kg o Alcatra R$ 5,90 por Kg R$ 6,80 por Kg o Picanha R$ 6,90 por Kg R$ 7,80 por Kg Para atender a todos os clientes, cada cliente poderá levar apenas um dos tipos de carne da promoção, porém não há limites para a quantidade de carne por cliente. Se compra for feita no cartão Tabajara o cliente receberá ainda um desconto de 5% sobre o total a compra. Escreva um programa que peça o tipo e a quantidade de carne comprada pelo usuário e gere um cupom fiscal, contendo as informações da compra: tipo e quantidade de carne, preço total, tipo de pagamento, valor do desconto e valor a pagar.
+        System.out.println("Quantidade de morango em kg");
+        double morango = scan.nextDouble();
+        System.out.println("Quantidade de maça em kg");
+        double maca = scan.nextDouble();
+        double valorMorango = 0;
+        double valorMaca = 0;
+
+        if (morango <=5) {
+            valorMorango = (morango * 2.5);
+        } else if  (morango >5 && morango >=8) {
+            valorMorango = (morango * 2.2);
+        } else {
+            valorMorango = ((morango * 2.2) * 100) / 10;
+        }
+
+        if (maca <=5) {
+            valorMaca = (maca * 1.8);
+        } else if (maca >5 && maca >=8) {
+            valorMaca = (maca * 1.5);
+        } else {
+            valorMaca = ((maca * 1.5) * 100)/ 10;
+        }
+
+        System.out.println("Valor total: " + valorMorango + valorMaca );
+        */
+
+        /*
+        23.O Hipermercado Tabajara está com uma promoção de carnes que é imperdível. Confira:
+         File Duplo:
+         Até 5 Kg R$ 4,90 por Kg
+         Acima de 5 Kg R$ 5,80 por Kg
+         Alcatra:
+         Até 5 Kg R$ 5,90 por Kg
+         Acima de 5 Kg R$ 6,80 por Kg
+         Picanha:
+         Até 5 Kg R$ 6,90 por Kg
+         Acima de 5 Kg R$ 7,80 por Kg
+         Para atender a todos os clientes, cada cliente poderá levar apenas um dos tipos de carne da promoção, porém não há limites para a quantidade de carne por cliente. Se compra for feita no cartão Tabajara o cliente receberá ainda um desconto de 5% sobre o total a compra. Escreva um programa que peça o tipo e a quantidade de carne comprada pelo usuário e gere um cupom fiscal, contendo as informações da compra: tipo e quantidade de carne, preço total, tipo de pagamento, valor do desconto e valor a pagar.
          */
+
+        System.out.println("Entre com o tipo da carne:");
+        System.out.println("1 - file duplo");
+        System.out.println("2 - alcatra");
+        System.out.println("3 - picanha");
+        int tipo = scan.nextInt();
+
+        System.out.println("Entre com a quantidade (kg):");
+        double qtd = scan.nextDouble();
+
+        double precoKg = 0;
+
+        if (tipo == 1){
+
+            System.out.println(qtd + "kg - file duplo");
+
+            if (qtd < 5){
+                precoKg = 4.9;
+            } else {
+                precoKg = 5.8;
+            }
+
+
+        } else if (tipo == 2){
+
+            System.out.println(qtd + "kg - alcatra");
+
+            if (qtd < 5){
+                precoKg = 5.9;
+            } else {
+                precoKg = 6.8;
+            }
+        } else if (tipo == 3){
+
+            System.out.println(qtd + "kg - picanha");
+
+            if (qtd < 5){
+                precoKg = 6.9;
+            } else {
+                precoKg = 7.8;
+            }
+        }
+
+        double total = qtd * precoKg;
+        System.out.println(qtd + "kg * " + precoKg + " = " + total);
+
+        System.out.println("Compra no cartão? digite 1 para sim:");
+        int cartao = scan.nextInt();
+
+        if (cartao == 1){
+            double desconto = (total / 100) * 5;
+            System.out.println("Desconto de: " + desconto);
+            System.out.println("Valor a pagar: " + (total - desconto));
+        } else {
+            System.out.println("Valor a pagar: " + total);
+        }
+
     }
 }
 
