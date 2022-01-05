@@ -216,21 +216,206 @@ public class Exercicios {
          */
 
         /*
+        System.out.println("Digite seu salário em reais");
+        double salario = scan.nextDouble();
+
+
+        if (salario <= 280) {
+            double valorAumento = (salario / 100) * 20;
+            double salarioNovo = salario + valorAumento;
+            System.out.println("Seu salário antes do reajuste é R$:" + salario);
+            System.out.println("O percentual de aumento foi 20%");
+            System.out.println("O valor do aumento foi: R$" + valorAumento);
+            System.out.println("Seu salário após o reajuste será R$" + salarioNovo);
+
+        } else if (salario > 280 && salario <= 700) {
+            double valorAumento = (salario / 100) * 20;
+            double salarioNovo = salario + valorAumento;
+
+            System.out.println("Seu salário antes do reajuste é R$:" + salario);
+            System.out.println("O percentual de aumento foi 15%");
+            System.out.println("O valor do aumento foi: R$" + valorAumento);
+            System.out.println("Seu salário após o reajuste será R$" + salarioNovo);
+
+        } else if (salario > 750 && salario <= 1500) {
+            double valorAumento = (salario / 100) * 5;
+            double salarioNovo = salario + valorAumento;
+
+            System.out.println("Seu salário antes do reajuste é R$:" + salario);
+            System.out.println("O percentual de aumento foi 5%");
+            System.out.println("O valor do aumento foi: R$" + valorAumento);
+            System.out.println("Seu salário após o reajuste será R$" + salarioNovo);
+        }
+        */
+
+
+        /*
         12.Faça um programa para o cálculo de uma folha de pagamento, sabendo que os descontos são do Imposto de Renda, que depende do
-2.     salário bruto (conforme tabela abaixo) e 3% para o Sindicato e que o FGTS corresponde a 11% do Salário Bruto, mas não é descontado (é a empresa que deposita). O Salário Líquido corresponde ao Salário Bruto menos os descontos. O programa deverá pedir ao usuário o valor da sua hora e a quantidade de horas trabalhadas no mês. o Desconto do IR: o Salário Bruto até 900 (inclusive) - isento o Salário Bruto até 1500 (inclusive) - desconto de 5% o Salário Bruto até 2500 (inclusive) - desconto de 10% o Salário Bruto acima de 2500 - desconto de 20% Imprima na tela as informações, dispostas conforme o exemplo abaixo. No exemplo o valor da hora é 5 e a quantidade de hora é 220. Salário Bruto: (5 * 220) : R$ 1100,00 (-) IR (5%) : R$ 55,00 (-) INSS ( 10%) : R$ 110,00 FGTS (11%) : R$ 121,00 Total de descontos : R$ 165,00 Salário Liquido : R$ 935,00
+     salário bruto (conforme tabela abaixo) e 3% para o Sindicato e que o FGTS corresponde a 11% do Salário Bruto, mas não é descontado (é a empresa que deposita). O Salário Líquido corresponde ao Salário Bruto menos os descontos. O programa deverá pedir ao usuário o valor da sua hora e a quantidade de horas trabalhadas no mês. o Desconto do IR:
+     o Salário Bruto até 900 (inclusive) - isento
+     o Salário Bruto até 1500 (inclusive) - desconto de 5%
+     o Salário Bruto até 2500 (inclusive) - desconto de 10%
+     o Salário Bruto acima de 2500 - desconto de 20%
+     Imprima na tela as informações, dispostas conforme o exemplo abaixo. No exemplo o valor da hora é 5 e a quantidade de hora é 220. Salário Bruto: (5 * 220) : R$ 1100,00 (-) IR (5%) : R$ 55,00 (-) INSS ( 10%) : R$ 110,00 FGTS (11%) : R$ 121,00 Total de descontos : R$ 165,00 Salário Liquido : R$ 935,00
          */
+
+        /*
+        System.out.println("Qual o valor da sua hora de trabalho?");
+        double valorHora = scan.nextDouble();
+        System.out.println("Qual foi a quantidade de horas trabalhadas esse mês?");
+        double qtddHoras = scan.nextDouble();
+
+        double salario = (valorHora * qtddHoras);
+        //double sindicato = (salario / 100) * 3;
+        double fgts = (salario / 100) * 11;
+        double ir;
+        double inss = (salario / 100) * 10;
+
+        if (salario >= 900 && salario <= 1500) {
+            ir = (salario / 100) * 5;
+            //System.out.println("IR: " + ir);
+        } else if (salario > 1500 && salario <= 2500) {
+            ir = (salario / 100) * 10;
+            //System.out.println("IR: " + ir);
+        } else if (salario > 2500) {
+            ir = (salario / 100) * 20;
+            //System.out.println("IR: " + ir);
+        } else {
+            ir = 0;
+            //System.out.println("IR: " + ir);
+        }
+
+        double salarioLiquido = (salario - ir - inss);
+        double descontos = ir + inss;
+        System.out.println("Salário Bruto: " + salario);
+        System.out.println("IR: " + ir);
+        System.out.println("INSS: " + inss);
+        System.out.println("FGTS: "+ fgts);
+        System.out.println("Total de Descontos: " + descontos);
+        System.out.println("Salário Líquido: " + salarioLiquido);
+        */
 
         /*
         13.Faça um Programa que leia um número e exiba o dia correspondente da semana. (1-Domingo, 2- Segunda, etc.), se digitar outro valor deve aparecer valor inválido.
          */
 
         /*
-        14.Faça um programa que lê as duas notas parciais obtidas por um aluno numa disciplina ao longo de um semestre, e calcule a sua média. A atribuição de conceitos obedece à tabela abaixo: o Média de Aproveitamento Conceito o Entre 9.0 e 10.0 A o Entre 7.5 e 9.0 B o Entre 6.0 e 7.5 C o Entre 4.0 e 6.0 D o Entre 4.0 e zero E O algoritmo deve mostrar na tela as notas, a média, o conceito correspondente e a mensagem “APROVADO” se o conceito for A, B ou C ou “REPROVADO” se o conceito for D ou E.
+        System.out.println("Digite um numero de 1 a 7 para o Dia da Semana");
+        int diaDaSemana = scan.nextInt();
+
+        switch(diaDaSemana) {
+            case 1 :
+                System.out.println("Domingo");
+            break;
+            case 2 :
+                System.out.println("Segunda-feira");
+            break;
+            case 3:
+                System.out.println("Terça-feira");
+            break;
+            case 4:
+                System.out.println("Quarta-feira");
+            break;
+            case 5:
+                System.out.println("Quinta-feira");
+            break;
+            case 6:
+                System.out.println("Sexta-feira");
+            break;
+            case 7:
+                System.out.println("Sábado");
+            break;
+            default :
+                System.out.println("Número Invalido");
+        }
+        */
+
+        /*
+        14.Faça um programa que lê as duas notas parciais obtidas por um aluno numa disciplina ao longo de um semestre, e calcule a sua média. A atribuição de conceitos obedece à tabela abaixo:
+        o Média de Aproveitamento Conceito
+        o Entre 9.0 e 10.0 A
+        o Entre 7.5 e 9.0 B
+        o Entre 6.0 e 7.5 C
+        o Entre 4.0 e 6.0 D
+        o Entre 4.0 e zero E
+        O algoritmo deve mostrar na tela as notas, a média, o conceito correspondente e a mensagem “APROVADO” se o conceito for A, B ou C ou “REPROVADO” se o conceito for D ou E.
          */
+
+        /*
+        System.out.println("Digite a primeira nota:");
+        double nota1 = scan.nextDouble();
+        System.out.println("Digite a segunda nota");
+        double nota2 = scan.nextDouble();
+        String conceito = " ";
+
+        double media = (nota1 + nota2) / 2;
+        System.out.println("A primeira nota foi: " + nota1);
+        System.out.println("A segunda nota foi: " + nota2);
+        System.out.println("A média das notas foi: " + media);
+
+        if (media >= 9) {
+            conceito = "A";
+        } else if (media < 9 && media >= 7.5) {
+            conceito = "B";
+        } else if (media < 7.5 && media >=6) {
+            conceito = "C";
+        } else if (media < 6 && media >= 4) {
+            conceito = "D";
+        } else if (media < 4 && media == 0) {
+            conceito = "E";
+        } else {
+            System.out.println("Verifique os valores");
+        }
+
+        System.out.println("O conceito foi: " + conceito);
+
+        switch(conceito) {
+            case "A":
+            case "B":
+            case "C":
+                System.out.println("Você foi Aprovado");
+                break;
+            case "D":
+            case "E":
+                System.out.println("Você foi Reprovado");
+                break;
+            default:
+                System.out.println("Conceito Inválido");
+        }
+        */
+
 
         /*
         15.Faça um Programa que peça os 3 lados de um triângulo. O programa deverá informar se os valores podem ser um triângulo. Indique, caso os lados formem um triângulo, se o mesmo é: equilátero, isósceles ou escaleno. o Dicas: o Três lados formam um triângulo quando a soma de quaisquer dois lados for maior que o terceiro; o Triângulo Equilátero: três lados iguais; o Triângulo Isósceles: quaisquer dois lados iguais; o Triângulo Escaleno: três lados diferentes;
          */
+
+        /*
+        System.out.println("Entre com o lado 1:");
+        int lado1 = scan.nextInt();
+
+        System.out.println("Entre com o lado 2:");
+        int lado2 = scan.nextInt();
+
+        System.out.println("Entre com o lado 3:");
+        int lado3 = scan.nextInt();
+
+        if (((lado1 + lado2) > lado3) ||
+                ((lado1 + lado3) > lado2) ||
+                ((lado2 + lado3) > lado1)){
+
+            if (lado1 == lado2 && lado1 == lado3 && lado2 == lado3){
+                System.out.println("Triângulo Equilátero");
+            } else if (lado1 != lado2 && lado1 != lado3 && lado3 != lado2){
+                System.out.println("Triângulo Escaleno");
+            } else if (lado1 == lado2 || lado1 == lado3 || lado2 == lado3){
+                System.out.println("Triângulo Isóceles");
+            }
+
+        } else {
+            System.out.println("não forma um triângulo");
+        }
+        */
+
 
         /*
         16.Faça um programa que calcule as raízes de uma equação do segundo grau, na forma ax2 + bx + c. O programa deverá pedir os valores de a, b e c e fazer as consistências, informando ao usuário nas seguintes situações: a. Se o usuário informar o valor de A igual a zero, a equação não é do segundo grau e o programa não deve fazer pedir os demais valores, sendo encerrado; b. Se o delta calculado for negativo, a equação não possui raizes reais. Informe ao usuário e encerre o programa; c. Se o delta calculado for igual a zero a equação possui apenas uma raiz real; informe-a ao usuário; d. Se o delta for positivo, a equação possui duas raiz reais; informe-as ao usuário;
@@ -266,3 +451,4 @@ public class Exercicios {
          */
     }
 }
+
