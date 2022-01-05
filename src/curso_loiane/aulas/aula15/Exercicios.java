@@ -94,18 +94,124 @@ public class Exercicios {
 
         //6. Faça um Programa que leia três números e mostre o maior deles
 
+        /*
+        System.out.println("Digite o primeiro número");
+        double num1 = scan.nextDouble();
+        System.out.println("Digite o segundo número");
+        double num2 = scan.nextDouble();
+        System.out.println("Digite o terceiro número");
+        double num3 = scan.nextDouble();
+
+        if ( num1 > num2 && num1 > num3) {
+            System.out.println("O maior numero é o 1: " + num1);
+        } else if (num2 > num1 && num2 > num3) {
+            System.out.println("O maior numero é o 2: " + num2);
+        } else if (num3 > num1 && num3 > num2){
+            System.out.println("O maior numero é o 3: " + num3);
+        } else {
+            System.out.println("Os numeros sao iguais");
+        }
+        */
+
         //7. Faça um Programa que leia três números e mostre o maior e o menor deles.
+
+        /*
+        System.out.println("Digite o primeiro número");
+        double num1 = scan.nextDouble();
+        System.out.println("Digite o segundo número");
+        double num2 = scan.nextDouble();
+        System.out.println("Digite o terceiro número");
+        double num3 = scan.nextDouble();
+
+        if (num1 > num2 && num1 > num3) {
+            System.out.println("O primeiro é o maior número");
+        } else if (num2 > num1 && num2 > num3) {
+            System.out.println("O segundo número é o maior número");
+        } else if (num3 > num1 && num3 > num2) {
+            System.out.println("O Terceiro número é o maior número");
+        } else {
+        System.out.println("Existem números iguais");
+        }
+
+        if (num1 < num2 && num1 < num3) {
+            System.out.println("O primeiro é o menor número");
+        } else if (num2 < num1 && num2 < num3){
+            System.out.println("O segundo número é o menor número");
+        } else if (num3 < num1 && num3 < num2) {
+            System.out.println("O Terceiro número é o maior número");
+        } else {
+            System.out.println("Existem números iguais");
+        }
+        */
 
         //8. Faça um programa que pergunte o preço de três produtos e informe qual produto você deve comprar,
         // sabendo que a decisão é sempre pelo mais barato.
 
+        /*
+        System.out.println("Digite o preço do primeiro produto");
+        double preco1 = scan.nextDouble();
+        System.out.println("Digite o preço do segundo produto");
+        double preco2 = scan.nextDouble();
+        System.out.println("Digite o preço do terceiro produto");
+        double preco3 = scan.nextDouble();
+
+        if (preco1 < preco2 && preco1 < preco3) {
+            System.out.println("Compre o primeiro produto");
+        } else if (preco2 < preco1 && preco2 < preco3) {
+            System.out.println("Compre o segundo produto");
+        } else if (preco3 < preco1 && preco3 < preco2) {
+            System.out.println("Compre o terceiro produto");
+        } else {
+            System.out.println("Existem produtos com preços iguais");
+        }
+        */
+
         //9. Faça um Programa que leia três números e mostre-os em ordem decrescente.
+
+        /*
+        System.out.println("Digite o primeiro número");
+        int num1 = scan.nextInt();
+        System.out.println("Digite o segundo número");
+        int num2 = scan.nextInt();
+        System.out.println("Digite o terceiro número");
+        int num3 = scan.nextInt();
+
+        if (num1 <= num2 && num1 <= num3 && num2 <= num3){
+            System.out.println(num3 + " - " + num2 + " - " + num1);
+        } else if (num1 <= num2 && num1 <= num3 && num3 <= num2){
+            System.out.println(num2 + " - " + num3 + " - " + num1);
+        } else if (num2 <= num1 && num2 <= num3 && num1 <= num3){
+            System.out.println(num3 + " - " + num1 + " - " + num2);
+        } else if (num2 <= num1 && num2 <= num3 && num3 <= num1){
+            System.out.println(num1 + " - " + num3 + " - " + num2);
+        } else if (num3 <= num1 && num3 <= num2 && num1 <= num2){
+            System.out.println(num2 + " - " + num1 + " - " + num3);
+        } else if (num3 <= num1 && num3 <= num2 && num2 <= num1){
+            System.out.println(num1 + " - " + num2 + " - " + num3);
+        }
+        */
 
         //10.Faça um Programa que pergunte em que turno você estuda. Peça para digitar M-matutino ou V-Vespertino
         // ou N- Noturno. Imprima a mensagem "Bom Dia!", "Boa Tarde!" ou "Boa Noite!"
         // ou "Valor Inválido!", conforme o caso.
 
         /*
+        System.out.println("Em que turno você estuda? Digite M para Matutino, V para Verpertino ou N para Noturno");
+        String turno = scan.next();
+
+        if (turno.equalsIgnoreCase("m")) {
+            System.out.println("Bom Dia!");
+        } else if (turno.equalsIgnoreCase("v")) {
+            System.out.println("Boa Tarde!");
+        } else if (turno.equalsIgnoreCase("n")) {
+            System.out.println("Boa Noite!");
+        } else {
+            System.out.println("Turno inválido");
+        }
+        //pode ser feito com Switch
+        */
+
+         /*
         11.As Organizações Tabajara resolveram dar um aumento de salário aos seus colaboradores e lhe contraram para desenvolver o programa que calculará os reajustes. o Faça um programa que recebe o salário de um colaborador e o reajuste segundo o seguinte critério, baseado no salário atual: o salários até R$ 280,00 (incluindo) : aumento de 20% o salários entre R$ 280,00 e R$ 700,00 : aumento de 15% o salários entre R$ 700,00 e R$ 1500,00 : aumento de 10% o salários de R$ 1500,00 em diante : aumento de 5% Após o aumento ser realizado, informe na tela: o o salário antes do reajuste; o o percentual de aumento aplicado; o o valor do aumento; o o novo salário, após o aumento.
          */
 
