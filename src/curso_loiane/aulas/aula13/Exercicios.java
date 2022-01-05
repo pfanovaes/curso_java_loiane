@@ -44,15 +44,15 @@ public class Exercicios {
 
         /*
         System.out.println("Digite a nota do primeiro bimestre:");
-        int nota1 = scan.nextInt();
+        double nota1 = scan.nextDouble();
         System.out.println("Digite a nota do segundo bimestre:");
-        int nota2 = scan.nextInt();
+        double nota2 = scan.nextDouble();
         System.out.println("Digite a nota do terceiro bimestre:");
-        int nota3 = scan.nextInt();
+        double nota3 = scan.nextDouble();
         System.out.println("Digite a nota do quarto bimestre:");
-        int nota4 = scan.nextInt();
+        double nota4 = scan.nextDouble();
 
-        int media = (nota1 + nota2 + nota3 + nota4) /4;
+        double media = (nota1 + nota2 + nota3 + nota4) /4;
         System.out.println("A média das notas digitadas foi: " + media);
 
          */
@@ -105,8 +105,23 @@ public class Exercicios {
         //  Faça um Programa que peça a temperatura em graus Farenheit, transforme e mostre a temperatura em graus Celsius.
         //  o C = (5 * (F-32) / 9).
 
+        /*
+        System.out.println("Digite uma temperatura em Farenheit:");
+        double tempFarenheit = scan.nextDouble();
+        double tempCelsius = (5 * (tempFarenheit - 32) /9 );
+        System.out.println("A temperatura em Celsius é: " + tempCelsius);
+        */
+
         //10
         // Faça um Programa que peça a temperatura em graus Celsius, transforme e mostre em graus Farenheit.
+
+        /*
+        System.out.println("Digite uma temperatura em Celsius:");
+        double tempCelsius = scan.nextDouble();
+        double tempFarenheit = ((9 * tempCelsius) + 160) / 5;
+        System.out.println("A temperatura em Farenheit é: " + tempFarenheit);
+        */
+
 
         //11
         // Faça um Programa que peça 2 números inteiros e um número real. Calcule e mostre:
@@ -114,9 +129,34 @@ public class Exercicios {
         // b. a soma do triplo do primeiro com o terceiro.
         // c. o terceiro elevado ao cubo.
 
+        /*
+        System.out.println("Digite um número inteiro");
+        int num1 = scan.nextInt();
+        System.out.println("Digite outro número inteiro");
+        int num2 = scan.nextInt();
+        System.out.println("Digite um número real");
+        double num3 = scan.nextDouble();
+
+        double itema = (2 * num1) * (num2 / 2);
+        System.out.println("o produto do dobro do primeiro com metade do segundo é: " + itema);
+
+        double itemb = (3 * num1) + num3;
+        System.out.println("a soma do triplo do primeiro com o terceiro é: " + itemb);
+
+        double itemc = Math.pow(num3, 3);
+        System.out.println("o terceiro elevado ao cubo é: " + itemc);
+        */
+
         //12
         // Tendo como dados de entrada a altura de uma pessoa, construa um algoritmo que calcule seu peso ideal, usando a seguinte fórmula:
         // (72.7*altura) - 58
+
+        /*
+        System.out.println("Digite sua altura:");
+        double altura = scan.nextDouble();
+        double pesoIdeal = (72.7 * altura) - 58;
+        System.out.println("O seu peso ideal é: " + pesoIdeal);
+        */
 
         //13
         /* Faça um Programa que pergunte quanto você ganha por hora e o número de horas trabalhadas no mês.
@@ -130,12 +170,39 @@ public class Exercicios {
           e o salário líquido, conforme a tabela abaixo:
           + Salário Bruto : R$ - IR (11%) : R$ - INSS (8%) : R$ - Sindicato ( 5%) : R$ = Salário Liquido : R$
          Obs.: Salário Bruto - Descontos = Salário Líquido.
+        */
 
-         */
+        /*
+        System.out.println("Quanto você ganha por hora?");
+        double valorHora = scan.nextDouble();
+        System.out.println("Quantas horas você trabalhou nesse mês?");
+        double numHoras = scan.nextDouble();
+        double salarioBruto = valorHora * numHoras;
+        double inss = (salarioBruto / 100) * 8;
+        double sindicato = (salarioBruto / 100) * 5;
+        double ir = (salarioBruto / 100) * 11;
+        double descontos = inss + sindicato + ir;
+        double salarioLiquido = salarioBruto - descontos;
+
+        System.out.println("Seu salário bruto foi R$:" + salarioBruto);
+        System.out.println("Vc pagou R$:" + inss + " para o inss");
+        System.out.println("Vc pagou R$:" + sindicato + " para o sindicato");
+        System.out.println("Vc pagou R$:" + ir + " para o imposto de renda");
+        System.out.println("O total de descontos no seu salário foi de R$:" + descontos);
+        System.out.println("Seu salário líquido foi R$:" + salarioLiquido);
+        */
 
         //14
         // 14.Faça um programa que peça o tamanho de um arquivo para download (em MB) e a velocidade de um link de Internet (em Mbps),
         // calcule e informe o tempo aproximado de download do arquivo usando este link (em minutos).
+
+        System.out.println("Qual o tamanho do aquivo em MB?");
+        double tamanhoArquivo = scan.nextDouble();
+        System.out.println("Qual a velocidade da internet em Mbs?");
+        double velocidadeInternet = scan.nextDouble();
+
+        double tempoDownload = (tamanhoArquivo / velocidadeInternet) / 60;
+        System.out.println("o tempo aproximado de download será: "+ tempoDownload + " minutos");
 
     }
 }
