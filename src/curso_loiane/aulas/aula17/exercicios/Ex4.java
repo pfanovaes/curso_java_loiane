@@ -1,4 +1,4 @@
-package curso_loiane.aulas.exercicios17;
+package curso_loiane.aulas.aula17.exercicios;
 
 public class Ex4 {
 
