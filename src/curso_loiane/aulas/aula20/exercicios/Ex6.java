@@ -1,4 +1,4 @@
-package curso_loiane.aulas.aula20;
+package curso_loiane.aulas.aula20.exercicios;
 
 public class Ex6 {
     /*
