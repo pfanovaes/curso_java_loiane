@@ -14,6 +14,8 @@ public class Ex7 {
 
         int num;
         int maior = Integer.MIN_VALUE;
+        int menor = Integer.MAX_VALUE;
+
 
         for (int i=0; i<5; i++){
 
@@ -22,11 +24,17 @@ public class Ex7 {
 
             if (num > maior){
                 maior = num;
-                System.out.println("o número maior mudou: " + maior);
+                //System.out.println("o número maior mudou: " + maior);
             }
+
+            if (num < menor) {
+                menor = num;
+            }
+
         }
-
+        int media = (maior + menor) / 2;
         System.out.println("O maior número digitado foi: " + maior);
-
+        System.out.println("O menor número digitado foi: " + menor);
+        System.out.println("A média do maior e menor numero foi: " + media);
     }
 }
