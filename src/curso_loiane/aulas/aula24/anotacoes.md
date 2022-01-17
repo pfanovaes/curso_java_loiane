@@ -11,7 +11,7 @@ public class Carro {<br>
     double consumoCombustivel;<br>
 }<br>
 
-<u>Criação de objeto</u><br>
+<u>Criação de objeto</u><br> (Instanciar classe)
 
 Carro van = new Carro();<br>
 van.marca = "Fiat";<br>
