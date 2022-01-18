@@ -10,14 +10,15 @@ public class Ex10 {
          /*
         10.Faça um programa que receba dois números inteiros e gere os números inteiros que estão no intervalo compreendido por eles.
          */
-
-        System.out.println("Digite um numero");
+        System.out.println("Entre com o primeiro número");
         int num1 = scan.nextInt();
-        System.out.println("Digite outro numero");
+
+        System.out.println("Entre com o segundo número");
         int num2 = scan.nextInt();
 
-        int maior = Integer.MIN_VALUE;
-        int menor = Integer.MAX_VALUE;
+        for (int i=num1; i<=num2; i++){
+            System.out.println(i);
+        }
 
 
     }
